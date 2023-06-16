@@ -1,0 +1,40 @@
+<table class="table">
+	<thead>
+		<tr>
+			<td>Variants</td>
+			<td>Outline buttons</td>
+			<td>Sizes</td>
+			<td>Disabled state</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+				<p *ngFor="let item of variants">
+					<ngb-button [variant]="item">{{ item }}</ngb-button>
+				</p>
+			</td>
+			<td>
+				<p *ngFor="let item of variants">
+					<ngb-button [variant]="item" [outline]="true">{{ item }}</ngb-button>
+				</p>
+			</td>
+			<td style="vertical-align: top">
+				<p>
+					<ngb-button [variant]="variant" size="lg" (click)="onClick()">button</ngb-button>
+				</p>
+				<p>
+					<ngb-button>button</ngb-button>
+				</p>
+				<p>
+					<ngb-button size="sm">button</ngb-button>
+				</p>
+			</td>
+			<td style="vertical-align: top">
+				<p>
+					<ngb-button [disabled]="true">button</ngb-button>
+				</p>
+			</td>
+		</tr>
+	</tbody>
+</table>

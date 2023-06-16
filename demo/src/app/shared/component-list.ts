@@ -1,6 +1,7 @@
 export const COMPONENT_LIST = [
 	'Accordion',
 	'Alert',
+	'Button',
 	'Carousel',
 	'Collapse',
 	'Datepicker',

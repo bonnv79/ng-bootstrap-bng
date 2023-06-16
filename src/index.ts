@@ -17,6 +17,7 @@ import { NgbToastModule } from './toast/toast.module';
 import { NgbTooltipModule } from './tooltip/tooltip.module';
 import { NgbTypeaheadModule } from './typeahead/typeahead.module';
 import { NgbOffcanvasModule } from './offcanvas/offcanvas.module';
+import { NgbButtonModule } from './ngb-button/ngb-button.module';
 
 export {
 	NgbAccordionDirective,
@@ -164,6 +165,8 @@ export { Placement } from './util/positioning';
 
 export { NgbConfig } from './ngb-config';
 
+export { NgbButton, NgbButtonModule } from './ngb-button/ngb-button.module';
+
 const NGB_MODULES = [
 	NgbAccordionModule,
 	NgbAlertModule,
@@ -182,6 +185,7 @@ const NGB_MODULES = [
 	NgbToastModule,
 	NgbTooltipModule,
 	NgbTypeaheadModule,
+	NgbButtonModule,
 ];
 
 @NgModule({ imports: NGB_MODULES, exports: NGB_MODULES })

@@ -18,6 +18,7 @@ import { ROUTES as TIMEPICKER_ROUTES } from './components/timepicker/timepicker.
 import { ROUTES as TOAST_ROUTES } from './components/toast/toast.routes';
 import { ROUTES as TOOLTIP_ROUTES } from './components/tooltip/tooltip.routes';
 import { ROUTES as TYPEAHEAD_ROUTES } from './components/typeahead/typeahead.routes';
+import { ROUTES as BUTTON_ROUTES } from './components/ngb-button/ngb-button.routes';
 import { DefaultComponent } from './default';
 import { GettingStartedPage } from './pages/getting-started/getting-started.component';
 import { AnimationsPage } from './pages/animations/animations.component';
@@ -59,5 +60,6 @@ export const ROUTES: Routes = [
 	{ path: 'components/timepicker', children: TIMEPICKER_ROUTES },
 	{ path: 'components/tooltip', children: TOOLTIP_ROUTES },
 	{ path: 'components/typeahead', children: TYPEAHEAD_ROUTES },
+	{ path: 'components/button', children: BUTTON_ROUTES },
 	{ path: '**', redirectTo: 'home' },
 ];
