@@ -11,28 +11,28 @@
 		<tr>
 			<td>
 				<p *ngFor="let item of variants">
-					<ngb-button [variant]="item">{{ item }}</ngb-button>
+					<bng-button [variant]="item">{{ item }}</bng-button>
 				</p>
 			</td>
 			<td>
 				<p *ngFor="let item of variants">
-					<ngb-button [variant]="item" [outline]="true">{{ item }}</ngb-button>
+					<bng-button [variant]="item" [outline]="true">{{ item }}</bng-button>
 				</p>
 			</td>
 			<td style="vertical-align: top">
 				<p>
-					<ngb-button [variant]="variant" size="lg" (click)="onClick()">button</ngb-button>
+					<bng-button [variant]="variant" size="lg" (click)="onClick()">button</bng-button>
 				</p>
 				<p>
-					<ngb-button>button</ngb-button>
+					<bng-button>button</bng-button>
 				</p>
 				<p>
-					<ngb-button size="sm">button</ngb-button>
+					<bng-button size="sm">button</bng-button>
 				</p>
 			</td>
 			<td style="vertical-align: top">
 				<p>
-					<ngb-button [disabled]="true">button</ngb-button>
+					<bng-button [disabled]="true">button</bng-button>
 				</p>
 			</td>
 		</tr>

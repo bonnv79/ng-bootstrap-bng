@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NgFor } from '@angular/common';
-import { NgbButtonModule } from '@ng-bootstrap/ng-bootstrap';
+import { BngButtonModule } from '@ng-bootstrap/ng-bootstrap';
 
 enum variants {
 	primary = 'primary',
@@ -17,8 +17,8 @@ enum variants {
 @Component({
 	selector: 'ngbd-button-basic',
 	standalone: true,
-	imports: [NgFor, NgbButtonModule],
-	templateUrl: './ngb-button-basic.html',
+	imports: [NgFor, BngButtonModule],
+	templateUrl: './bng-button-basic.html',
 })
 export class NgbdButtonBasic {
 	variants: any = Object.values(variants);

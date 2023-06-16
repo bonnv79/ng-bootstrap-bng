@@ -6,7 +6,7 @@ import { NgbdExamplesPage } from '../../shared/examples-page/examples.component'
 import { NgbdApiPage } from '../../shared/api-page/api-page.component';
 import { ENVIRONMENT_INITIALIZER, inject } from '@angular/core';
 import { NgbdDemoListService } from '../../services/demo-list.service';
-import { NgbdButtonBasic } from './demos/basic/ngb-button-basic';
+import { NgbdButtonBasic } from './demos/basic/bng-button-basic';
 
 const DEMOS = {
 	basic: {
@@ -14,12 +14,12 @@ const DEMOS = {
 		type: NgbdButtonBasic,
 		files: [
 			{
-				name: 'ngb-button-basic.html',
-				source: require('!!raw-loader!./demos/basic/ngb-button-basic.html').default,
+				name: 'bng-button-basic.html',
+				source: require('!!raw-loader!./demos/basic/bng-button-basic.html').default,
 			},
 			{
-				name: 'ngb-button-basic.ts',
-				source: require('!!raw-loader!./demos/basic/ngb-button-basic').default,
+				name: 'bng-button-basic.ts',
+				source: require('!!raw-loader!./demos/basic/bng-button-basic').default,
 			},
 		],
 	},
@@ -35,7 +35,7 @@ export const ROUTES: Routes = [
 			{
 				provide: ENVIRONMENT_INITIALIZER,
 				multi: true,
-				useValue: () => inject(NgbdDemoListService).register('button', DEMOS),
+				useValue: () => inject(NgbdDemoListService).register('bng-button', DEMOS),
 			},
 		],
 		children: [

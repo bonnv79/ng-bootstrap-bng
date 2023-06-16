@@ -22,9 +22,14 @@ enum variants {
 	link = 'link',
 }
 
+/**
+ * BngButton is a component to provide a button for user.
+ *
+ * It supports several button types and can be click.
+ */
 @Component({
-	selector: 'ngb-button',
-	exportAs: 'ngbButton',
+	selector: 'bng-button',
+	exportAs: 'BngButton',
 	standalone: true,
 	changeDetection: ChangeDetectionStrategy.OnPush,
 	encapsulation: ViewEncapsulation.None,
@@ -33,13 +38,36 @@ enum variants {
 		class: 'btn',
 		'[class.disabled]': 'disabled',
 	},
-	templateUrl: './ngb-button.html',
-	styleUrls: ['./ngb-button.scss'],
+	templateUrl: './bng-button.html',
+	styleUrls: ['./bng-button.scss'],
 })
-export class NgbButton implements OnInit, OnChanges {
+export class BngButton implements OnInit, OnChanges {
+	/**
+	 * Bootstrap includes several button variants, each serving its own semantic purpose, with a few extras thrown in for more control.
+	 * Bootstrap provides styles for the following types: 'success', 'info', 'warning', 'danger', 'primary', 'secondary', 'light', 'dark' and 'link'.
+	 *
+	 */
 	@Input() variant?: variants = variants.primary;
+
+	/**
+	 * Fancy larger or smaller buttons? Add .btn-lg or .btn-sm for additional sizes.
+	 * Bootstrap provides styles for the following types: undefined, `'lg'` and 'sm'
+	 *
+	 */
 	@Input() size?: string = '';
+
+	/**
+	 * In need of a button, but not the hefty background colors they bring?
+	 * Replace the default modifier classes with the .btn-outline-* ones to remove all background images and colors on any button.
+	 *
+	 */
 	@Input() outline?: boolean = false;
+
+	/**
+	 * Make buttons look inactive by adding the disabled boolean attribute to any <button> element.
+	 * Disabled buttons have pointer-events: none applied to, preventing hover and active states from triggering.
+	 *
+	 */
 	@Input() disabled?: boolean = false;
 
 	constructor(private _renderer: Renderer2, private _element: ElementRef) {}
